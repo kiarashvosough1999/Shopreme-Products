@@ -41,6 +41,8 @@
 		DE51448E2A5CAE8500C124B9 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51447F2A5CAE8500C124B9 /* NetworkServices.swift */; };
 		DE5144912A5CAEA800C124B9 /* LoadImageDataRespositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144902A5CAEA800C124B9 /* LoadImageDataRespositoryProtocol.swift */; };
 		DE5144932A5CAEBA00C124B9 /* CategorizedProductsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144922A5CAEBA00C124B9 /* CategorizedProductsRepositoryProtocol.swift */; };
+		DE5144992A5CB1A200C124B9 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = DE5144982A5CB1A200C124B9 /* Factory */; };
+		DE51449B2A5CB1DC00C124B9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51449A2A5CB1DC00C124B9 /* Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,7 @@
 		DE51447F2A5CAE8500C124B9 /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		DE5144902A5CAEA800C124B9 /* LoadImageDataRespositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageDataRespositoryProtocol.swift; sourceTree = "<group>"; };
 		DE5144922A5CAEBA00C124B9 /* CategorizedProductsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedProductsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DE51449A2A5CB1DC00C124B9 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5144992A5CB1A200C124B9 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +168,7 @@
 		DE5144292A5CA97100C124B9 /* Shopreme-ProductsTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE51449C2A5CB2A300C124B9 /* Mocks */,
 				DE51442A2A5CA97100C124B9 /* Shopreme_ProductsTests.swift */,
 			);
 			path = "Shopreme-ProductsTests";
@@ -234,6 +239,7 @@
 		DE5144492A5CAA3800C124B9 /* DependencyContainer */ = {
 			isa = PBXGroup;
 			children = (
+				DE51449A2A5CB1DC00C124B9 /* Container.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -314,6 +320,13 @@
 			path = RepsitoriesProtocol;
 			sourceTree = "<group>";
 		};
+		DE51449C2A5CB2A300C124B9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +343,9 @@
 			dependencies = (
 			);
 			name = "Shopreme-Products";
+			packageProductDependencies = (
+				DE5144982A5CB1A200C124B9 /* Factory */,
+			);
 			productName = "Shopreme-Products";
 			productReference = DE5144102A5CA97000C124B9 /* Shopreme-Products.app */;
 			productType = "com.apple.product-type.application";
@@ -402,6 +418,9 @@
 				Base,
 			);
 			mainGroup = DE5144072A5CA97000C124B9;
+			packageReferences = (
+				DE5144972A5CB1A200C124B9 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			productRefGroup = DE5144112A5CA97000C124B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -463,6 +482,7 @@
 				DE51445A2A5CAB5200C124B9 /* StrikeLabel.swift in Sources */,
 				DE5144602A5CAB5200C124B9 /* Assets+Images.swift in Sources */,
 				DE51445E2A5CAB5200C124B9 /* Assets+Colors.swift in Sources */,
+				DE51449B2A5CB1DC00C124B9 /* Container.swift in Sources */,
 				DE51448D2A5CAE8500C124B9 /* NetworkServices+CategorizedProductsRepositoryProtocol.swift in Sources */,
 				DE5144872A5CAE8500C124B9 /* GateWays.swift in Sources */,
 				DE5144682A5CAD8900C124B9 /* ProductCategoryEntity.swift in Sources */,
@@ -802,6 +822,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE5144972A5CB1A200C124B9 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE5144982A5CB1A200C124B9 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE5144972A5CB1A200C124B9 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE5144082A5CA97000C124B9 /* Project object */;
 }
