@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct ProductCategoryEntity: Identifiable {
-    let id: UUID
+struct ProductCategoryEntity {
     let title: String
     let products: [ProductEntity]
 }
