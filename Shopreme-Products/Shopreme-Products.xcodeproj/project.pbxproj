@@ -14,6 +14,17 @@
 		DE51442B2A5CA97100C124B9 /* Shopreme_ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51442A2A5CA97100C124B9 /* Shopreme_ProductsTests.swift */; };
 		DE5144352A5CA97100C124B9 /* Shopreme_ProductsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144342A5CA97100C124B9 /* Shopreme_ProductsUITests.swift */; };
 		DE5144372A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144362A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift */; };
+		DE5144592A5CAB5200C124B9 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51444C2A5CAB5200C124B9 /* CloseButton.swift */; };
+		DE51445A2A5CAB5200C124B9 /* StrikeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51444D2A5CAB5200C124B9 /* StrikeLabel.swift */; };
+		DE51445B2A5CAB5200C124B9 /* LabledActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51444E2A5CAB5200C124B9 /* LabledActivityView.swift */; };
+		DE51445C2A5CAB5200C124B9 /* CollectionViewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51444F2A5CAB5200C124B9 /* CollectionViewHeaderReusableView.swift */; };
+		DE51445D2A5CAB5200C124B9 /* AsyncUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144502A5CAB5200C124B9 /* AsyncUIImageView.swift */; };
+		DE51445E2A5CAB5200C124B9 /* Assets+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144522A5CAB5200C124B9 /* Assets+Colors.swift */; };
+		DE51445F2A5CAB5200C124B9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144532A5CAB5200C124B9 /* Assets.swift */; };
+		DE5144602A5CAB5200C124B9 /* Assets+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144542A5CAB5200C124B9 /* Assets+Images.swift */; };
+		DE5144612A5CAB5200C124B9 /* Assets+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144552A5CAB5200C124B9 /* Assets+Fonts.swift */; };
+		DE5144622A5CAB5200C124B9 /* Assets++Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144562A5CAB5200C124B9 /* Assets++Strings.swift */; };
+		DE5144632A5CAB5200C124B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE5144582A5CAB5200C124B9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,17 @@
 		DE5144302A5CA97100C124B9 /* Shopreme-ProductsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopreme-ProductsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5144342A5CA97100C124B9 /* Shopreme_ProductsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopreme_ProductsUITests.swift; sourceTree = "<group>"; };
 		DE5144362A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopreme_ProductsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE51444C2A5CAB5200C124B9 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		DE51444D2A5CAB5200C124B9 /* StrikeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrikeLabel.swift; sourceTree = "<group>"; };
+		DE51444E2A5CAB5200C124B9 /* LabledActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabledActivityView.swift; sourceTree = "<group>"; };
+		DE51444F2A5CAB5200C124B9 /* CollectionViewHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderReusableView.swift; sourceTree = "<group>"; };
+		DE5144502A5CAB5200C124B9 /* AsyncUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncUIImageView.swift; sourceTree = "<group>"; };
+		DE5144522A5CAB5200C124B9 /* Assets+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Colors.swift"; sourceTree = "<group>"; };
+		DE5144532A5CAB5200C124B9 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		DE5144542A5CAB5200C124B9 /* Assets+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Images.swift"; sourceTree = "<group>"; };
+		DE5144552A5CAB5200C124B9 /* Assets+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Fonts.swift"; sourceTree = "<group>"; };
+		DE5144562A5CAB5200C124B9 /* Assets++Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets++Strings.swift"; sourceTree = "<group>"; };
+		DE5144582A5CAB5200C124B9 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +167,7 @@
 		DE5144452A5CA9AF00C124B9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE51444A2A5CAB5200C124B9 /* DesignSystem */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -175,6 +198,48 @@
 			children = (
 			);
 			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		DE51444A2A5CAB5200C124B9 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				DE51444B2A5CAB5200C124B9 /* Components */,
+				DE5144512A5CAB5200C124B9 /* Assets */,
+				DE5144572A5CAB5200C124B9 /* Localization */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		DE51444B2A5CAB5200C124B9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DE51444C2A5CAB5200C124B9 /* CloseButton.swift */,
+				DE51444D2A5CAB5200C124B9 /* StrikeLabel.swift */,
+				DE51444E2A5CAB5200C124B9 /* LabledActivityView.swift */,
+				DE51444F2A5CAB5200C124B9 /* CollectionViewHeaderReusableView.swift */,
+				DE5144502A5CAB5200C124B9 /* AsyncUIImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DE5144512A5CAB5200C124B9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DE5144522A5CAB5200C124B9 /* Assets+Colors.swift */,
+				DE5144532A5CAB5200C124B9 /* Assets.swift */,
+				DE5144542A5CAB5200C124B9 /* Assets+Images.swift */,
+				DE5144552A5CAB5200C124B9 /* Assets+Fonts.swift */,
+				DE5144562A5CAB5200C124B9 /* Assets++Strings.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		DE5144572A5CAB5200C124B9 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				DE5144582A5CAB5200C124B9 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5144202A5CA97100C124B9 /* LaunchScreen.storyboard in Resources */,
+				DE5144632A5CAB5200C124B9 /* Localizable.strings in Resources */,
 				DE51441D2A5CA97100C124B9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,8 +373,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5144592A5CAB5200C124B9 /* CloseButton.swift in Sources */,
 				DE5144142A5CA97000C124B9 /* AppDelegate.swift in Sources */,
+				DE51445B2A5CAB5200C124B9 /* LabledActivityView.swift in Sources */,
+				DE5144622A5CAB5200C124B9 /* Assets++Strings.swift in Sources */,
+				DE51445C2A5CAB5200C124B9 /* CollectionViewHeaderReusableView.swift in Sources */,
+				DE51445D2A5CAB5200C124B9 /* AsyncUIImageView.swift in Sources */,
+				DE51445A2A5CAB5200C124B9 /* StrikeLabel.swift in Sources */,
+				DE5144602A5CAB5200C124B9 /* Assets+Images.swift in Sources */,
+				DE51445E2A5CAB5200C124B9 /* Assets+Colors.swift in Sources */,
 				DE5144162A5CA97000C124B9 /* SceneDelegate.swift in Sources */,
+				DE5144612A5CAB5200C124B9 /* Assets+Fonts.swift in Sources */,
+				DE51445F2A5CAB5200C124B9 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
