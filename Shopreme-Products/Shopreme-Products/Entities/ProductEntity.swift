@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct ProductEntity: Identifiable {
-    let id: UUID
+struct ProductEntity {
     let title: String
     let imageURL: URL
     let price: Double
