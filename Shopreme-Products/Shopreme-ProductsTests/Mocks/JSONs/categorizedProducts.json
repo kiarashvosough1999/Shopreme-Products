@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": "BAC84B8B-FDBF-49E2-BB52-99A1F60EF091",
+      "title": "Frische Früchte",
+      "products": [
+        {
+          "id": "BAC84B8B-FDBF-49E2-BB52-09A1F60EF091",
+          "title": "Apfel Elstar aus Österreich",
+          "imageURL": "https://shopreme.com/jobinterview/data/apfel.jpeg",
+          "price": 2.49,
+          "strikePrice": null,
+          "description": "Klasse I\n\nElstar Äpfel von Da komm ich her! sind mittelfest und haben einen frischen, süß-säuerlichen Geschmack. Die Sorte gehört zu den beliebtesten Speiseäpfeln.\n\nQualität aus Österreich\neignet sich gut für Strudel oder zum Dörren"
+        },
+        {
+          "id": "2F2BBA17-35FC-4044-8BCA-D8FA74052564",
+          "title": "Erdbeeren aus Spanien",
+          "imageURL": "https://shopreme.com/jobinterview/data/erdbeeren.jpeg",
+          "price": 2.79,
+          "strikePrice": 2.99,
+          "description": "Klasse I\n\nsaftig-süß\nfeste, gleichmäßig gereifte Früchte\nideal für Obstsalate oder für den gesunden Snack zwischendurch"
+        },
+        {
+          "id": "D7383AB5-A7E8-4B39-B8FD-67AF5E82BDAF",
+          "title": "Erdnüsse",
+          "imageURL": "https://shopreme.com/jobinterview/data/erdnuesse.jpeg",
+          "price": 1.59,
+          "strikePrice": null,
+          "description": "Klasse I\n\nOb als knackige Knabberei, Salatzutat, in warmen Gerichten oder Gebäck: SanLucar Erdnüsse bilden einen wertvollen Bestandteil für eine ausgewogene Ernährung.\n\ngeröstete Erdnüsse mit Schale\nideal als nahrhafter Snack oder Zutat in warmen und kalten Speisen\nreich an Eiweiß, Mineralien und Vitaminen"
+        }
+      ]
+    },
+    {
+      "id": "BAC84B8B-FDBF-49E2-BB02-99A1F60EF091",
+      "title": "Gesundes Gemüse",
+      "products": [
+        {
+          "id": "2933B120-7400-4183-89A8-BBBCE037F8E3",
+          "title": "Weißkraut aus Österreich",
+          "imageURL": "https://shopreme.com/jobinterview/data/weisskraut.jpeg",
+          "price": 0.99,
+          "strikePrice": 1.25,
+          "description": "Klasse I\n\n\nfester Kopf\nkeine fleckigen oder trockenen Außenblätter\nWeißkraut ist eine Variante des Kopfkohls\nvorwiegend in Herbst und Winter Saison"
+        },
+        {
+          "id": "15A92132-277F-4285-A2AB-629418BB7199",
+          "title": "Snack Radieschen aus Österreich",
+          "imageURL": "https://shopreme.com/jobinterview/data/radieschen.jpeg",
+          "price": 1,
+          "strikePrice": 1.49,
+          "description": "Klasse I\n\nHeute schon gesund gesnackt? Die Snack Radieschen zeichnen sich durch ihr unverkennbares Aroma aus und schmecken auch gut im frisch zubereiteten Salat.\n\nliefern wichtige Vitamine und Mineralstoffe"
+        },
+        {
+          "id": "C9EAC077-5927-4EB5-82AD-2E8827091E9B",
+          "title": "Kartoffel, speckig",
+          "imageURL": "https://shopreme.com/jobinterview/data/kartoffel.jpg",
+          "price": 2.49,
+          "strikePrice": null,
+          "description": "Klasse I\n\nHeimisches Gemüse aus österreichischem Anbau: Die speckigen Erdäpfel von Da komm` ich her! lassen sich wunderbar zu Salat und köstlichen Beilagen verarbeiten.\n\naus der Region\nreich an Vitaminen und Mineralstoffen"
+        }
+      ]
+    }
+  ]
+}
