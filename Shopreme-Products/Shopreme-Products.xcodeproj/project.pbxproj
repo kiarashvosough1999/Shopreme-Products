@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE5144142A5CA97000C124B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144132A5CA97000C124B9 /* AppDelegate.swift */; };
+		DE5144162A5CA97000C124B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144152A5CA97000C124B9 /* SceneDelegate.swift */; };
+		DE51441D2A5CA97100C124B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE51441C2A5CA97100C124B9 /* Assets.xcassets */; };
+		DE5144202A5CA97100C124B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE51441E2A5CA97100C124B9 /* LaunchScreen.storyboard */; };
+		DE51442B2A5CA97100C124B9 /* Shopreme_ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51442A2A5CA97100C124B9 /* Shopreme_ProductsTests.swift */; };
+		DE5144352A5CA97100C124B9 /* Shopreme_ProductsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144342A5CA97100C124B9 /* Shopreme_ProductsUITests.swift */; };
+		DE5144372A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144362A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE5144272A5CA97100C124B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE5144082A5CA97000C124B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE51440F2A5CA97000C124B9;
+			remoteInfo = "Shopreme-Products";
+		};
+		DE5144312A5CA97100C124B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE5144082A5CA97000C124B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE51440F2A5CA97000C124B9;
+			remoteInfo = "Shopreme-Products";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE5144102A5CA97000C124B9 /* Shopreme-Products.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopreme-Products.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5144132A5CA97000C124B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE5144152A5CA97000C124B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DE51441C2A5CA97100C124B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE51441F2A5CA97100C124B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE5144212A5CA97100C124B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE5144262A5CA97100C124B9 /* Shopreme-ProductsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopreme-ProductsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE51442A2A5CA97100C124B9 /* Shopreme_ProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopreme_ProductsTests.swift; sourceTree = "<group>"; };
+		DE5144302A5CA97100C124B9 /* Shopreme-ProductsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopreme-ProductsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5144342A5CA97100C124B9 /* Shopreme_ProductsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopreme_ProductsUITests.swift; sourceTree = "<group>"; };
+		DE5144362A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopreme_ProductsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE51440D2A5CA97000C124B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5144232A5CA97100C124B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE51442D2A5CA97100C124B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE5144072A5CA97000C124B9 = {
+			isa = PBXGroup;
+			children = (
+				DE5144122A5CA97000C124B9 /* Shopreme-Products */,
+				DE5144292A5CA97100C124B9 /* Shopreme-ProductsTests */,
+				DE5144332A5CA97100C124B9 /* Shopreme-ProductsUITests */,
+				DE5144112A5CA97000C124B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE5144112A5CA97000C124B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE5144102A5CA97000C124B9 /* Shopreme-Products.app */,
+				DE5144262A5CA97100C124B9 /* Shopreme-ProductsTests.xctest */,
+				DE5144302A5CA97100C124B9 /* Shopreme-ProductsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE5144122A5CA97000C124B9 /* Shopreme-Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE5144492A5CAA3800C124B9 /* DependencyContainer */,
+				DE5144482A5CAA1000C124B9 /* Data */,
+				DE5144472A5CAA0A00C124B9 /* UseCases */,
+				DE5144462A5CA9BB00C124B9 /* Entities */,
+				DE5144452A5CA9AF00C124B9 /* Presentation */,
+				DE5144442A5CA9A600C124B9 /* Resources */,
+				DE5144432A5CA9A100C124B9 /* App */,
+				DE5144212A5CA97100C124B9 /* Info.plist */,
+			);
+			path = "Shopreme-Products";
+			sourceTree = "<group>";
+		};
+		DE5144292A5CA97100C124B9 /* Shopreme-ProductsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE51442A2A5CA97100C124B9 /* Shopreme_ProductsTests.swift */,
+			);
+			path = "Shopreme-ProductsTests";
+			sourceTree = "<group>";
+		};
+		DE5144332A5CA97100C124B9 /* Shopreme-ProductsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE5144342A5CA97100C124B9 /* Shopreme_ProductsUITests.swift */,
+				DE5144362A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift */,
+			);
+			path = "Shopreme-ProductsUITests";
+			sourceTree = "<group>";
+		};
+		DE5144432A5CA9A100C124B9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DE5144132A5CA97000C124B9 /* AppDelegate.swift */,
+				DE5144152A5CA97000C124B9 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DE5144442A5CA9A600C124B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE51441C2A5CA97100C124B9 /* Assets.xcassets */,
+				DE51441E2A5CA97100C124B9 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE5144452A5CA9AF00C124B9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DE5144462A5CA9BB00C124B9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DE5144472A5CAA0A00C124B9 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DE5144482A5CAA1000C124B9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DE5144492A5CAA3800C124B9 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE51440F2A5CA97000C124B9 /* Shopreme-Products */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE51443A2A5CA97100C124B9 /* Build configuration list for PBXNativeTarget "Shopreme-Products" */;
+			buildPhases = (
+				DE51440C2A5CA97000C124B9 /* Sources */,
+				DE51440D2A5CA97000C124B9 /* Frameworks */,
+				DE51440E2A5CA97000C124B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shopreme-Products";
+			productName = "Shopreme-Products";
+			productReference = DE5144102A5CA97000C124B9 /* Shopreme-Products.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE5144252A5CA97100C124B9 /* Shopreme-ProductsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE51443D2A5CA97100C124B9 /* Build configuration list for PBXNativeTarget "Shopreme-ProductsTests" */;
+			buildPhases = (
+				DE5144222A5CA97100C124B9 /* Sources */,
+				DE5144232A5CA97100C124B9 /* Frameworks */,
+				DE5144242A5CA97100C124B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE5144282A5CA97100C124B9 /* PBXTargetDependency */,
+			);
+			name = "Shopreme-ProductsTests";
+			productName = "Shopreme-ProductsTests";
+			productReference = DE5144262A5CA97100C124B9 /* Shopreme-ProductsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE51442F2A5CA97100C124B9 /* Shopreme-ProductsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE5144402A5CA97100C124B9 /* Build configuration list for PBXNativeTarget "Shopreme-ProductsUITests" */;
+			buildPhases = (
+				DE51442C2A5CA97100C124B9 /* Sources */,
+				DE51442D2A5CA97100C124B9 /* Frameworks */,
+				DE51442E2A5CA97100C124B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE5144322A5CA97100C124B9 /* PBXTargetDependency */,
+			);
+			name = "Shopreme-ProductsUITests";
+			productName = "Shopreme-ProductsUITests";
+			productReference = DE5144302A5CA97100C124B9 /* Shopreme-ProductsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE5144082A5CA97000C124B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DE51440F2A5CA97000C124B9 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					DE5144252A5CA97100C124B9 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = DE51440F2A5CA97000C124B9;
+					};
+					DE51442F2A5CA97100C124B9 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = DE51440F2A5CA97000C124B9;
+					};
+				};
+			};
+			buildConfigurationList = DE51440B2A5CA97000C124B9 /* Build configuration list for PBXProject "Shopreme-Products" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE5144072A5CA97000C124B9;
+			productRefGroup = DE5144112A5CA97000C124B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE51440F2A5CA97000C124B9 /* Shopreme-Products */,
+				DE5144252A5CA97100C124B9 /* Shopreme-ProductsTests */,
+				DE51442F2A5CA97100C124B9 /* Shopreme-ProductsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE51440E2A5CA97000C124B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5144202A5CA97100C124B9 /* LaunchScreen.storyboard in Resources */,
+				DE51441D2A5CA97100C124B9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5144242A5CA97100C124B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE51442E2A5CA97100C124B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE51440C2A5CA97000C124B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5144142A5CA97000C124B9 /* AppDelegate.swift in Sources */,
+				DE5144162A5CA97000C124B9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5144222A5CA97100C124B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE51442B2A5CA97100C124B9 /* Shopreme_ProductsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE51442C2A5CA97100C124B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5144352A5CA97100C124B9 /* Shopreme_ProductsUITests.swift in Sources */,
+				DE5144372A5CA97100C124B9 /* Shopreme_ProductsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE5144282A5CA97100C124B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE51440F2A5CA97000C124B9 /* Shopreme-Products */;
+			targetProxy = DE5144272A5CA97100C124B9 /* PBXContainerItemProxy */;
+		};
+		DE5144322A5CA97100C124B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE51440F2A5CA97000C124B9 /* Shopreme-Products */;
+			targetProxy = DE5144312A5CA97100C124B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE51441E2A5CA97100C124B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE51441F2A5CA97100C124B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE5144382A5CA97100C124B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE5144392A5CA97100C124B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE51443B2A5CA97100C124B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88P363PJC9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shopreme-Products/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-Products";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE51443C2A5CA97100C124B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88P363PJC9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shopreme-Products/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-Products";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE51443E2A5CA97100C124B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88P363PJC9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-ProductsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopreme-Products.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Shopreme-Products";
+			};
+			name = Debug;
+		};
+		DE51443F2A5CA97100C124B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88P363PJC9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-ProductsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopreme-Products.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Shopreme-Products";
+			};
+			name = Release;
+		};
+		DE5144412A5CA97100C124B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88P363PJC9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-ProductsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Shopreme-Products";
+			};
+			name = Debug;
+		};
+		DE5144422A5CA97100C124B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88P363PJC9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-ProductsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Shopreme-Products";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE51440B2A5CA97000C124B9 /* Build configuration list for PBXProject "Shopreme-Products" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE5144382A5CA97100C124B9 /* Debug */,
+				DE5144392A5CA97100C124B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE51443A2A5CA97100C124B9 /* Build configuration list for PBXNativeTarget "Shopreme-Products" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE51443B2A5CA97100C124B9 /* Debug */,
+				DE51443C2A5CA97100C124B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE51443D2A5CA97100C124B9 /* Build configuration list for PBXNativeTarget "Shopreme-ProductsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE51443E2A5CA97100C124B9 /* Debug */,
+				DE51443F2A5CA97100C124B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE5144402A5CA97100C124B9 /* Build configuration list for PBXNativeTarget "Shopreme-ProductsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE5144412A5CA97100C124B9 /* Debug */,
+				DE5144422A5CA97100C124B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE5144082A5CA97000C124B9 /* Project object */;
+}
