@@ -91,6 +91,7 @@
 		DEFF14FE2A5DDA00008B62F7 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF14FD2A5DDA00008B62F7 /* Throttler.swift */; };
 		DEFF15002A5DE317008B62F7 /* ErrorHandlerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF14FF2A5DE317008B62F7 /* ErrorHandlerViewModelProtocol.swift */; };
 		DEFF15022A5DE835008B62F7 /* ListContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF15012A5DE835008B62F7 /* ListContentConfiguration.swift */; };
+		DEFF15042A5DEBED008B62F7 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF15032A5DEBED008B62F7 /* Recorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,7 @@
 		DEFF14FD2A5DDA00008B62F7 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 		DEFF14FF2A5DE317008B62F7 /* ErrorHandlerViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerViewModelProtocol.swift; sourceTree = "<group>"; };
 		DEFF15012A5DE835008B62F7 /* ListContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentConfiguration.swift; sourceTree = "<group>"; };
+		DEFF15032A5DEBED008B62F7 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,6 +475,7 @@
 				DEDE5F792A5D33C000639F3D /* JSONLoader.swift */,
 				DEDE5F7F2A5D476600639F3D /* XCAsserts.swift */,
 				DEDE5F812A5D478500639F3D /* TimeMeasurer.swift */,
+				DEFF15032A5DEBED008B62F7 /* Recorder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFF15042A5DEBED008B62F7 /* Recorder.swift in Sources */,
 				DEDE5F822A5D478500639F3D /* TimeMeasurer.swift in Sources */,
 				DEDE5F7A2A5D33C000639F3D /* JSONLoader.swift in Sources */,
 				DEDE5F6B2A5D30FA00639F3D /* LoadImageDataUseCaseMock.swift in Sources */,
