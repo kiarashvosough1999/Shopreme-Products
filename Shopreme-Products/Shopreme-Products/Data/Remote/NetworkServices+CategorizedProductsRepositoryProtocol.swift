@@ -10,12 +10,14 @@ import Foundation
 extension NetworkServices: CategorizedProductsRepositoryProtocol {
 
     func fetch() async throws -> [ProductCategoryEntity] {
-        guard await reachability.isNetworkAvailable() else {
-            throw NonDomainError.networkUnavailable
+        do {
+            let result = try await session.data(for: Request())
+            guard result.statusCode == .OK else { throw NetworkError.requestFailed }
+            return try result.decode(to: CategoriesEntity.self).categories
+        } catch {
+            try throwErrorIfOffline(error)
         }
-        let result = try await session.data(for: Request())
-        guard result.statusCode == .OK else { throw NetworkError.requestFailed }
-        return try result.decode(to: CategoriesEntity.self).categories
+        throw NonDomainError.unknownError
     }
 }
 

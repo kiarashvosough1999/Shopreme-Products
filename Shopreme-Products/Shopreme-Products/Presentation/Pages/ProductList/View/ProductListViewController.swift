@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class ProductListViewController: UIViewController, PageLoadingProtocol {
+final class ProductListViewController: UIViewController, PageLoadingProtocol, RetryButtonProtocol, ErrorHandlerViewProtocol {
 
     private var cancellables: Set<AnyCancellable>
 
@@ -29,7 +29,7 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol {
 
     // MARK: - Inputs
     
-    private let viewModel: ProductListViewModelProtocol
+    let viewModel: ProductListViewModelProtocol
     private let routing: ProductListRoutingProtocol
 
     init(
@@ -63,8 +63,10 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol {
     }
 
     private func prepareCollectionView() {
+        collectionView.delegate = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView)
+
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -84,17 +86,34 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol {
             }
             .store(in: &cancellables)
 
+        let action = UIAction { [weak self] _ in
+            guard let self else { return }
+            self.viewModel.fetchProducts()
+        }
+        handleError(on: viewModel, action: action)
+            .store(in: &cancellables)
+
         viewModel
             .shouldStartActivity
             .receive(on: DispatchQueue.main)
             .sink { [weak self] model in
                 guard let self else { return }
+                self.removeRetryButton()
                 self.shouldShowActivityView(model: model)
+            }
+            .store(in: &cancellables)
+        
+        viewModel
+            .showProductDetailsPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] product in
+                guard let self else { return }
+                self.routing.openProductDetails(product: product)
             }
             .store(in: &cancellables)
     }
     
-    private func applySnapshot(_ snapshot: [ProductSnapShot]) {
+    private func applySnapshot(_ snapshot: [ProductCategorySnapShot]) {
         var diffableSnapshot = NSDiffableDataSourceSnapshot<ProductListSection, ProductListItem>()
         snapshot.forEach { category in
             diffableSnapshot.appendSections([category.section])

@@ -14,4 +14,13 @@ enum DomainError: LocalizedError {
 enum NonDomainError: LocalizedError {
     case networkUnavailable
     case insufficientResource
+    case unknownError
+    
+    var errorDescription: String? {
+        switch self {
+        case .networkUnavailable:
+            return .localized(.die_internetverbindung_scheint_offline_zu_sein)
+        default: return nil
+        }
+    }
 }

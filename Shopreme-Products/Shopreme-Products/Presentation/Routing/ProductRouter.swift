@@ -29,6 +29,14 @@ final class ProductRouter: RouterProtocol {
 extension ProductRouter: ProductListRoutingProtocol {
 
     func openProductDetails(product: ProductEntity) {
-        
+        let viewModel = ProductDetailsViewModel(product: product)
+        let controller = ProductDetailsViewController(viewModel: viewModel, routing: self)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension ProductRouter: ProductDetailsRouting {
+    func closeCurrentPage() {
+        navigationController?.popViewController(animated: true)
     }
 }

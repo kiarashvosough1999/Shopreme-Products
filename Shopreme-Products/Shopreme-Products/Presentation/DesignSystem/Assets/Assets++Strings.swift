@@ -13,6 +13,9 @@ extension Assets {
 
         case stat
         case obst_und_gemüse
+        case produckte_werden_geladen = "produckte werden geladen..."
+        case wiederholen
+        case die_internetverbindung_scheint_offline_zu_sein = "die internetverbindung scheint offline zu sein."
 
         var localized: String {
             NSLocalizedString(rawValue.replacingOccurrences(of: "_", with: " "), comment: "")
