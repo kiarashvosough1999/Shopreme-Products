@@ -13,6 +13,7 @@ extension Container {
         Factory(self) {
             NetworkServices()
         }
+        .scope(.singleton)
     }
 
     var categorizedProductsRepository: Factory<CategorizedProductsRepositoryProtocol> {
