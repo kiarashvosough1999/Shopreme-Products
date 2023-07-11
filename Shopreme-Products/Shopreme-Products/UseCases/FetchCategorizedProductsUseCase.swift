@@ -1,6 +1,6 @@
 //
 //  FetchCategorizedProductsUseCase.swift
-//  Shopeme-Products
+//  Shopreme-Products
 //
 //  Created by Kiarash Vosough on 7/10/23.
 //

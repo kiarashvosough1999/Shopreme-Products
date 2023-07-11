@@ -12,9 +12,10 @@ extension Assets {
     enum Strings: String {
 
         case stat
+        case obst_und_gemüse
 
         var localized: String {
-            NSLocalizedString(rawValue, comment: "")
+            NSLocalizedString(rawValue.replacingOccurrences(of: "_", with: " "), comment: "")
         }
     }
 }

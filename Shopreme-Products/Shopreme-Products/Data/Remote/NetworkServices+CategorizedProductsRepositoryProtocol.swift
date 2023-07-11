@@ -15,7 +15,7 @@ extension NetworkServices: CategorizedProductsRepositoryProtocol {
         }
         let result = try await session.data(for: Request())
         guard result.statusCode == .OK else { throw NetworkError.requestFailed }
-        return try result.decode(to: [ProductCategoryEntity].self)
+        return try result.decode(to: CategoriesEntity.self).categories
     }
 }
 
