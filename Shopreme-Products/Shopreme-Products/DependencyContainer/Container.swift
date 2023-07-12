@@ -31,4 +31,8 @@ extension Container {
     var loadImageDataUseCase: Factory<LoadImageDataUseCaseProtocol> {
         Factory(self) { LoadImageDataUseCase() }
     }
+    
+    var feedBackGenerator: Factory<FeedBackGeneratorProtocol> {
+        Factory(self) { HapticServices() }
+    }
 }

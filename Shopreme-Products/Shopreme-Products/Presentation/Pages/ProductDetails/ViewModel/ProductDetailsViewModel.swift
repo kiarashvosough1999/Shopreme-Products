@@ -37,6 +37,7 @@ final class ProductDetailsViewModel {
 
     @LazyInjected(\.loadImageDataUseCase) private var loadImageDataUseCase
     @LazyInjected(\.categorizedProductsUseCase) private var categorizedProductsUseCase
+    @LazyInjected(\.feedBackGenerator) private var feedBackGenerator
 
     // MARK: - LifeCycle
 
@@ -60,7 +61,10 @@ final class ProductDetailsViewModel {
                 let data = try await loadImageDataUseCase.loadimageData(url)
                 guard Task.isCancelled == false else { return }
                 imageLoadedSubject.send(data)
-            } catch {}
+                feedBackGenerator.generateSuccessFeedBack()
+            } catch {
+                feedBackGenerator.generateErrorFeedBack()
+            }
         }
     }
 }

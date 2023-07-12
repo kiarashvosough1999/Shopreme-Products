@@ -37,6 +37,7 @@ final class ProductListViewModel {
     
     // MARK: - Dependencies
 
+    @LazyInjected(\.feedBackGenerator) private var feedBackGenerator
     @LazyInjected(\.categorizedProductsUseCase) private var categorizedProductsUseCase
 
     // MARK: - LifeCycle
@@ -73,7 +74,11 @@ extension ProductListViewModel: ProductListViewModelProtocol {
     }
 
     func fetchProducts() async {
-        guard throttler.canGo() else { return }
+        guard throttler.canGo() else {
+            feedBackGenerator.generateImapctFeedBack()
+            feedBackGenerator.generateWarningFeedBack()
+            return
+        }
         let activityModel = LabledActivityViewModel(
             loadingDescription: .localized(.produckte_werden_geladen).capitalized
         )
@@ -83,14 +88,17 @@ extension ProductListViewModel: ProductListViewModelProtocol {
             let result = try await self.categorizedProductsUseCase.fetch()
             self.activitySubject.send(nil)
             self.categories.send(result)
+            feedBackGenerator.generateSuccessFeedBack()
         } catch let error as LocalizedError {
             self.activitySubject.send(nil)
             self.shouldStartRetrySubject.send(
                 RetryButtonModel(subtitle: error.errorDescription ?? "")
             )
+            feedBackGenerator.generateErrorFeedBack()
         } catch {
             self.activitySubject.send(nil)
             self.shouldStartRetrySubject.send(RetryButtonModel())
+            feedBackGenerator.generateErrorFeedBack()
         }
     }
     
@@ -109,6 +117,7 @@ extension ProductListViewModel: ProductListViewModelProtocol {
     
     func didSelectedItem(at indexPath: IndexPath) {
         guard let product = categories.value[safe: indexPath.section]?.products[safe: indexPath.row] else { return }
+        feedBackGenerator.generateErrorFeedBack()
         showProductDetailsSubject.send(product)
     }
 }

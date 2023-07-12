@@ -39,7 +39,9 @@
 		DE5144932A5CAEBA00C124B9 /* CategorizedProductsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5144922A5CAEBA00C124B9 /* CategorizedProductsRepositoryProtocol.swift */; };
 		DE5144992A5CB1A200C124B9 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = DE5144982A5CB1A200C124B9 /* Factory */; };
 		DE51449B2A5CB1DC00C124B9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51449A2A5CB1DC00C124B9 /* Container.swift */; };
+		DE94C66F2A5EE57C003DB8CB /* HapticServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94C66E2A5EE57C003DB8CB /* HapticServices.swift */; };
 		DE96797F2A5ED32900AC91BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96797E2A5ED32900AC91BE /* main.swift */; };
+		DEC45FA72A5EFFAB006C953B /* HapticServices+FeedBackGeneratorRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC45FA62A5EFFAB006C953B /* HapticServices+FeedBackGeneratorRepositoryProtocol.swift */; };
 		DEDA36482A5E97ED00BF2602 /* MapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA36472A5E97ED00BF2602 /* MapperProtocol.swift */; };
 		DEDA364A2A5E98D600BF2602 /* ProductCategoryEntityToProductCategorySnapShotMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA36492A5E98D600BF2602 /* ProductCategoryEntityToProductCategorySnapShotMapper.swift */; };
 		DEDA364C2A5E9B7C00BF2602 /* ProductEntityToProductSnapShotMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA364B2A5E9B7C00BF2602 /* ProductEntityToProductSnapShotMapper.swift */; };
@@ -143,8 +145,10 @@
 		DE5144902A5CAEA800C124B9 /* LoadImageDataRespositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageDataRespositoryProtocol.swift; sourceTree = "<group>"; };
 		DE5144922A5CAEBA00C124B9 /* CategorizedProductsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedProductsRepositoryProtocol.swift; sourceTree = "<group>"; };
 		DE51449A2A5CB1DC00C124B9 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		DE94C66E2A5EE57C003DB8CB /* HapticServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticServices.swift; sourceTree = "<group>"; };
 		DE96797E2A5ED32900AC91BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		DE9679812A5ED76B00AC91BE /* Shopreme-Products.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Shopreme-Products.xctestplan"; path = "Shopreme-ProductsTests/Shopreme-Products.xctestplan"; sourceTree = SOURCE_ROOT; };
+		DE9679812A5ED76B00AC91BE /* Shopreme-Products.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Shopreme-Products.xctestplan"; path = "Shopreme-ProductsTests/Shopreme-Products.xctestplan"; sourceTree = SOURCE_ROOT; };
+		DEC45FA62A5EFFAB006C953B /* HapticServices+FeedBackGeneratorRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HapticServices+FeedBackGeneratorRepositoryProtocol.swift"; sourceTree = "<group>"; };
 		DEDA36472A5E97ED00BF2602 /* MapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperProtocol.swift; sourceTree = "<group>"; };
 		DEDA36492A5E98D600BF2602 /* ProductCategoryEntityToProductCategorySnapShotMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryEntityToProductCategorySnapShotMapper.swift; sourceTree = "<group>"; };
 		DEDA364B2A5E9B7C00BF2602 /* ProductEntityToProductSnapShotMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntityToProductSnapShotMapper.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 		DE5144452A5CA9AF00C124B9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE94C66D2A5EE561003DB8CB /* Device */,
 				DEDE5FAB2A5DA2FC00639F3D /* Routing */,
 				DEDE5F892A5D855C00639F3D /* Pages */,
 				DE51444A2A5CAB5200C124B9 /* DesignSystem */,
@@ -425,6 +430,15 @@
 				DEDA364D2A5E9E5000BF2602 /* MockData.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DE94C66D2A5EE561003DB8CB /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				DE94C66E2A5EE57C003DB8CB /* HapticServices.swift */,
+				DEC45FA62A5EFFAB006C953B /* HapticServices+FeedBackGeneratorRepositoryProtocol.swift */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		DEDE5F6F2A5D311400639F3D /* Protocols */ = {
@@ -756,6 +770,7 @@
 				DE5144592A5CAB5200C124B9 /* CloseButton.swift in Sources */,
 				DE5144142A5CA97000C124B9 /* AppDelegate.swift in Sources */,
 				DEFF14E92A5DB345008B62F7 /* ProductDetailsSections.swift in Sources */,
+				DE94C66F2A5EE57C003DB8CB /* HapticServices.swift in Sources */,
 				DEDE5FA02A5D858800639F3D /* ProductListItem.swift in Sources */,
 				DE5144882A5CAE8500C124B9 /* URLSession++APITask.swift in Sources */,
 				DEDE5FA52A5D858800639F3D /* ProductListViewController.swift in Sources */,
@@ -772,6 +787,7 @@
 				DEDE5F9D2A5D858800639F3D /* ProductCollectionViewCellViewModel.swift in Sources */,
 				DE51446B2A5CAD8A00C124B9 /* CategoriesEntity.swift in Sources */,
 				DEFF14EB2A5DBFAB008B62F7 /* ProductDetailsItems++ListConfiguraion.swift in Sources */,
+				DEC45FA72A5EFFAB006C953B /* HapticServices+FeedBackGeneratorRepositoryProtocol.swift in Sources */,
 				DE51445C2A5CAB5200C124B9 /* CollectionViewHeaderReusableView.swift in Sources */,
 				DE96797F2A5ED32900AC91BE /* main.swift in Sources */,
 				DEFF15022A5DE835008B62F7 /* ListContentConfiguration.swift in Sources */,
@@ -983,6 +999,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -990,9 +1007,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-Products";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1009,6 +1029,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1016,9 +1037,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kiarash.vosough.com.Shopreme-Products";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
