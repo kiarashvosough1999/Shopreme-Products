@@ -20,7 +20,7 @@ final class Throttler {
         defer {
             lastAttempt = .now
         }
-        if let lastAttempt, lastAttempt.timeIntervalSinceNow >= delay {
+        if let lastAttempt, lastAttempt.timeIntervalSinceNow.magnitude >= delay {
             return true
         } else {
             return false
