@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum DomainError: LocalizedError {
-    
-}
-
 enum NonDomainError: LocalizedError {
     case networkUnavailable
     case insufficientResource

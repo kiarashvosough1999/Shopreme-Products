@@ -35,8 +35,8 @@ final class ProductDetailsViewModel {
 
     // MARK: - Dependencies
 
-    @LazyInjected(\.loadImageDataUseCase) private var loadImageDataUseCase
-    @LazyInjected(\.categorizedProductsUseCase) private var categorizedProductsUseCase
+    @LazyInjected(\.loadImageDataRespository) private var loadImageDataRespository
+    @LazyInjected(\.categorizedProductsRepository) private var categorizedProductsRepository
     @LazyInjected(\.feedBackGenerator) private var feedBackGenerator
 
     // MARK: - LifeCycle
@@ -58,7 +58,7 @@ final class ProductDetailsViewModel {
     private func loadImage(with url: URL) {
         loadTask = Task {
             do {
-                let data = try await loadImageDataUseCase.loadimageData(url)
+                let data = try await loadImageDataRespository.loadimageData(url)
                 guard Task.isCancelled == false else { return }
                 imageLoadedSubject.send(data)
                 feedBackGenerator.generateSuccessFeedBack()

@@ -15,16 +15,16 @@ I have created an iOS App "Shopreme-Products" and implemented the Design from ![
 - [x] Deployment target: iOS 15
 - [x] Devices: iPhone only
 - [x] Portrait only
-- [x] MVVM + Clean
+- [x] MVVM
 - [x] Language: Swift 5.5
 - [x] UIKit
 
 ## Features and Bonuses
 
-- [x] Design System(imported and used specified fonts and color and resuable compnnents) 
+- [x] Design System(imported and used specified fonts and color and reusable compnnents) 
 - [x] Two Columns List(Regarding the screen size)
 - [x] Dynamic Page Routing
-- [x] Unit-Tests
+- [x] Unit-Tests(for viewModels)
 - [x] Dependency Managment
 - [x] Self Implemented Network Layer
 - [x] Fancy Animations and Transitions
@@ -32,6 +32,8 @@ I have created an iOS App "Shopreme-Products" and implemented the Design from ![
 - [x] Used Sectioned Products List(from ![API](https://shopreme.com/jobinterview/data/products_categories.json))
 - [x] Haptic Feedbacks
 - [x] Image Caching
+- [x] Avoided Complexity
+- [x] Layer Depend on Abstraction/Interfaces(Scalability)
 
 # Architecture Overview
 

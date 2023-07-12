@@ -20,8 +20,8 @@ final class ProductDetailsViewModelTests: XCTestCase, JSONLoader {
         imageData = MockData.data
         sut = ProductDetailsViewModel(product: product)
 
-        Container.shared.loadImageDataUseCase.register {
-            LoadImageDataUseCaseMock(delayInSecond: 2, data: self.imageData)
+        Container.shared.loadImageDataRespository.register {
+            LoadImageDataRespositoryMock(delayInSecond: 2, data: self.imageData)
         }
     }
 

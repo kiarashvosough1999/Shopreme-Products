@@ -24,14 +24,6 @@ extension Container {
         Factory(self) { self.network() }
     }
     
-    var categorizedProductsUseCase: Factory<FetchCategorizedProductsUseCaseProtocol> {
-        Factory(self) { FetchCategorizedProductsUseCase() }
-    }
-
-    var loadImageDataUseCase: Factory<LoadImageDataUseCaseProtocol> {
-        Factory(self) { LoadImageDataUseCase() }
-    }
-    
     var feedBackGenerator: Factory<FeedBackGeneratorProtocol> {
         Factory(self) { HapticServices() }
     }

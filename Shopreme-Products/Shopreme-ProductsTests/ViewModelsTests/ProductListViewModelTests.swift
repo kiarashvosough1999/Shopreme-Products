@@ -18,8 +18,8 @@ final class ProductListViewModelTests: XCTestCase, JSONLoader {
         let imageData = MockData.data
         let delay: UInt64 = 2
 
-        Container.shared.loadImageDataUseCase.register {
-            LoadImageDataUseCaseMock(delayInSecond: delay, data: imageData)
+        Container.shared.loadImageDataRespository.register {
+            LoadImageDataRespositoryMock(delayInSecond: delay, data: imageData)
         }
     }
 
@@ -33,8 +33,8 @@ final class ProductListViewModelTests: XCTestCase, JSONLoader {
         let delayInSecond: UInt64 = 2
         let indexPath = IndexPath(row: 0, section: 0)
 
-        Container.shared.categorizedProductsUseCase.register {
-            FetchCategorizedProductsUseCaseMock(
+        Container.shared.categorizedProductsRepository.register {
+            CategorizedProductsRepositoryMock(
                 delayInSecond: delayInSecond,
                 productCategory: mockProducts.categories
             )
@@ -54,8 +54,8 @@ final class ProductListViewModelTests: XCTestCase, JSONLoader {
     func testShouldStartActivity() async throws {
         let delayInSecond: UInt64 = 2
 
-        Container.shared.categorizedProductsUseCase.register {
-            FetchCategorizedProductsUseCaseMock(delayInSecond: delayInSecond)
+        Container.shared.categorizedProductsRepository.register {
+            CategorizedProductsRepositoryMock(delayInSecond: delayInSecond)
         }
 
         Task {
@@ -76,8 +76,8 @@ final class ProductListViewModelTests: XCTestCase, JSONLoader {
         let code = -123
         let error = NSError(domain: domain, code: code)
 
-        Container.shared.categorizedProductsUseCase.register {
-            FetchCategorizedProductsUseCaseMock(delayInSecond: delayInSecond, error: error)
+        Container.shared.categorizedProductsRepository.register {
+            CategorizedProductsRepositoryMock(delayInSecond: delayInSecond, error: error)
         }
 
         Task {
@@ -97,8 +97,8 @@ final class ProductListViewModelTests: XCTestCase, JSONLoader {
     func testShouldStartRetryPublisher() async throws {
         let delayInSecond: UInt64 = 2
 
-        Container.shared.categorizedProductsUseCase.register {
-            FetchCategorizedProductsUseCaseMock(delayInSecond: delayInSecond)
+        Container.shared.categorizedProductsRepository.register {
+            CategorizedProductsRepositoryMock(delayInSecond: delayInSecond)
         }
 
         await sut.fetchProducts()
@@ -117,8 +117,8 @@ final class ProductListViewModelTests: XCTestCase, JSONLoader {
         let code = -123
         let error = NSError(domain: domain, code: code)
 
-        Container.shared.categorizedProductsUseCase.register {
-            FetchCategorizedProductsUseCaseMock(delayInSecond: delayInSecond, error: error)
+        Container.shared.categorizedProductsRepository.register {
+            CategorizedProductsRepositoryMock(delayInSecond: delayInSecond, error: error)
         }
 
         await sut.fetchProducts()
@@ -135,8 +135,8 @@ final class ProductListViewModelTests: XCTestCase, JSONLoader {
         let mockProducts = try loadCategorizedProducts()
         let delayInSecond: UInt64 = 2
         
-        Container.shared.categorizedProductsUseCase.register {
-            FetchCategorizedProductsUseCaseMock(delayInSecond: delayInSecond, productCategory: mockProducts.categories)
+        Container.shared.categorizedProductsRepository.register {
+            CategorizedProductsRepositoryMock(delayInSecond: delayInSecond, productCategory: mockProducts.categories)
         }
         
         Task {

@@ -38,7 +38,7 @@ final class ProductListViewModel {
     // MARK: - Dependencies
 
     @LazyInjected(\.feedBackGenerator) private var feedBackGenerator
-    @LazyInjected(\.categorizedProductsUseCase) private var categorizedProductsUseCase
+    @LazyInjected(\.categorizedProductsRepository) private var categorizedProductsRepository
 
     // MARK: - LifeCycle
 
@@ -85,7 +85,7 @@ extension ProductListViewModel: ProductListViewModelProtocol {
         self.shouldStartRetrySubject.send(nil)
         self.activitySubject.send(activityModel)
         do {
-            let result = try await self.categorizedProductsUseCase.fetch()
+            let result = try await self.categorizedProductsRepository.fetch()
             self.activitySubject.send(nil)
             self.categories.send(result)
             feedBackGenerator.generateSuccessFeedBack()

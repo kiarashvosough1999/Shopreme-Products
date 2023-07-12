@@ -48,18 +48,12 @@
 		DEDA364E2A5E9E5000BF2602 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA364D2A5E9E5000BF2602 /* MockData.swift */; };
 		DEDE5F672A5D30FA00639F3D /* categorizedProducts.json in Resources */ = {isa = PBXBuildFile; fileRef = DEDE5F5F2A5D30FA00639F3D /* categorizedProducts.json */; };
 		DEDE5F682A5D30FA00639F3D /* CategorizedProductsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F602A5D30FA00639F3D /* CategorizedProductsRepositoryMock.swift */; };
-		DEDE5F692A5D30FA00639F3D /* FetchCategorizedProductsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F612A5D30FA00639F3D /* FetchCategorizedProductsUseCaseMock.swift */; };
-		DEDE5F6B2A5D30FA00639F3D /* LoadImageDataUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F632A5D30FA00639F3D /* LoadImageDataUseCaseMock.swift */; };
 		DEDE5F6C2A5D30FA00639F3D /* LoadImageDataRespositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F642A5D30FA00639F3D /* LoadImageDataRespositoryMock.swift */; };
 		DEDE5F6D2A5D30FA00639F3D /* MockURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F652A5D30FA00639F3D /* MockURL.swift */; };
 		DEDE5F6E2A5D30FA00639F3D /* JSONLoader++JSONMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F662A5D30FA00639F3D /* JSONLoader++JSONMocks.swift */; };
-		DEDE5F732A5D31A600639F3D /* FetchCategorizedProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F712A5D31A600639F3D /* FetchCategorizedProductsUseCase.swift */; };
-		DEDE5F742A5D31A600639F3D /* LoadImageDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F722A5D31A600639F3D /* LoadImageDataUseCase.swift */; };
-		DEDE5F772A5D332B00639F3D /* FetchCategorizedProductsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F762A5D332B00639F3D /* FetchCategorizedProductsUseCaseTests.swift */; };
 		DEDE5F7A2A5D33C000639F3D /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F792A5D33C000639F3D /* JSONLoader.swift */; };
 		DEDE5F802A5D476600639F3D /* XCAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F7F2A5D476600639F3D /* XCAsserts.swift */; };
 		DEDE5F822A5D478500639F3D /* TimeMeasurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F812A5D478500639F3D /* TimeMeasurer.swift */; };
-		DEDE5F842A5D4B7100639F3D /* LoadImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F832A5D4B7100639F3D /* LoadImageDataUseCaseTests.swift */; };
 		DEDE5F872A5D4C7100639F3D /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F852A5D4C7100639F3D /* Mock.swift */; };
 		DEDE5F882A5D4C7100639F3D /* MockActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F862A5D4C7100639F3D /* MockActions.swift */; };
 		DEDE5F9C2A5D858800639F3D /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE5F8C2A5D858800639F3D /* ProductListViewModel.swift */; };
@@ -155,18 +149,12 @@
 		DEDA364D2A5E9E5000BF2602 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		DEDE5F5F2A5D30FA00639F3D /* categorizedProducts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categorizedProducts.json; sourceTree = "<group>"; };
 		DEDE5F602A5D30FA00639F3D /* CategorizedProductsRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorizedProductsRepositoryMock.swift; sourceTree = "<group>"; };
-		DEDE5F612A5D30FA00639F3D /* FetchCategorizedProductsUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCategorizedProductsUseCaseMock.swift; sourceTree = "<group>"; };
-		DEDE5F632A5D30FA00639F3D /* LoadImageDataUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadImageDataUseCaseMock.swift; sourceTree = "<group>"; };
 		DEDE5F642A5D30FA00639F3D /* LoadImageDataRespositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadImageDataRespositoryMock.swift; sourceTree = "<group>"; };
 		DEDE5F652A5D30FA00639F3D /* MockURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURL.swift; sourceTree = "<group>"; };
 		DEDE5F662A5D30FA00639F3D /* JSONLoader++JSONMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONLoader++JSONMocks.swift"; sourceTree = "<group>"; };
-		DEDE5F712A5D31A600639F3D /* FetchCategorizedProductsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCategorizedProductsUseCase.swift; sourceTree = "<group>"; };
-		DEDE5F722A5D31A600639F3D /* LoadImageDataUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadImageDataUseCase.swift; sourceTree = "<group>"; };
-		DEDE5F762A5D332B00639F3D /* FetchCategorizedProductsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCategorizedProductsUseCaseTests.swift; sourceTree = "<group>"; };
 		DEDE5F792A5D33C000639F3D /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		DEDE5F7F2A5D476600639F3D /* XCAsserts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAsserts.swift; sourceTree = "<group>"; };
 		DEDE5F812A5D478500639F3D /* TimeMeasurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMeasurer.swift; sourceTree = "<group>"; };
-		DEDE5F832A5D4B7100639F3D /* LoadImageDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageDataUseCaseTests.swift; sourceTree = "<group>"; };
 		DEDE5F852A5D4C7100639F3D /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		DEDE5F862A5D4C7100639F3D /* MockActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockActions.swift; sourceTree = "<group>"; };
 		DEDE5F8C2A5D858800639F3D /* ProductListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
@@ -247,10 +235,10 @@
 		DE5144122A5CA97000C124B9 /* Shopreme-Products */ = {
 			isa = PBXGroup;
 			children = (
+				DE51448F2A5CAE9600C124B9 /* Repsitories */,
 				DEFF14FC2A5DD9FB008B62F7 /* Utils */,
 				DE5144492A5CAA3800C124B9 /* DependencyContainer */,
 				DE5144482A5CAA1000C124B9 /* Data */,
-				DE5144472A5CAA0A00C124B9 /* UseCases */,
 				DE5144462A5CA9BB00C124B9 /* Entities */,
 				DE5144452A5CA9AF00C124B9 /* Presentation */,
 				DE5144442A5CA9A600C124B9 /* Resources */,
@@ -263,9 +251,9 @@
 		DE5144292A5CA97100C124B9 /* Shopreme-ProductsTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE9679812A5ED76B00AC91BE /* Shopreme-Products.xctestplan */,
 				DEFF15052A5DED14008B62F7 /* ViewModelsTests */,
 				DEDE5F782A5D33B900639F3D /* Utils */,
-				DEDE5F752A5D331800639F3D /* UseCasesTests */,
 				DE51449C2A5CB2A300C124B9 /* Mocks */,
 			);
 			path = "Shopreme-ProductsTests";
@@ -311,16 +299,6 @@
 				DE5144662A5CAD8900C124B9 /* ProductEntity.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		DE5144472A5CAA0A00C124B9 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				DEDE5F712A5D31A600639F3D /* FetchCategorizedProductsUseCase.swift */,
-				DEDE5F722A5D31A600639F3D /* LoadImageDataUseCase.swift */,
-				DE51448F2A5CAE9600C124B9 /* RepsitoriesProtocol */,
-			);
-			path = UseCases;
 			sourceTree = "<group>";
 		};
 		DE5144482A5CAA1000C124B9 /* Data */ = {
@@ -408,13 +386,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		DE51448F2A5CAE9600C124B9 /* RepsitoriesProtocol */ = {
+		DE51448F2A5CAE9600C124B9 /* Repsitories */ = {
 			isa = PBXGroup;
 			children = (
 				DE5144902A5CAEA800C124B9 /* LoadImageDataRespositoryProtocol.swift */,
 				DE5144922A5CAEBA00C124B9 /* CategorizedProductsRepositoryProtocol.swift */,
 			);
-			path = RepsitoriesProtocol;
+			path = Repsitories;
 			sourceTree = "<group>";
 		};
 		DE51449C2A5CB2A300C124B9 /* Mocks */ = {
@@ -423,9 +401,7 @@
 				DEDE5F702A5D311900639F3D /* JSONs */,
 				DEDE5F6F2A5D311400639F3D /* Protocols */,
 				DEDE5F602A5D30FA00639F3D /* CategorizedProductsRepositoryMock.swift */,
-				DEDE5F612A5D30FA00639F3D /* FetchCategorizedProductsUseCaseMock.swift */,
 				DEDE5F642A5D30FA00639F3D /* LoadImageDataRespositoryMock.swift */,
-				DEDE5F632A5D30FA00639F3D /* LoadImageDataUseCaseMock.swift */,
 				DEDE5F652A5D30FA00639F3D /* MockURL.swift */,
 				DEDA364D2A5E9E5000BF2602 /* MockData.swift */,
 			);
@@ -455,15 +431,6 @@
 				DEDE5F5F2A5D30FA00639F3D /* categorizedProducts.json */,
 			);
 			path = JSONs;
-			sourceTree = "<group>";
-		};
-		DEDE5F752A5D331800639F3D /* UseCasesTests */ = {
-			isa = PBXGroup;
-			children = (
-				DEDE5F762A5D332B00639F3D /* FetchCategorizedProductsUseCaseTests.swift */,
-				DEDE5F832A5D4B7100639F3D /* LoadImageDataUseCaseTests.swift */,
-			);
-			path = UseCasesTests;
 			sourceTree = "<group>";
 		};
 		DEDE5F782A5D33B900639F3D /* Utils */ = {
@@ -640,7 +607,6 @@
 			isa = PBXGroup;
 			children = (
 				DEFF15062A5DED38008B62F7 /* ProductDetailsViewModelTests.swift */,
-				DE9679812A5ED76B00AC91BE /* Shopreme-Products.xctestplan */,
 				DEFF15082A5DED7C008B62F7 /* ProductListViewModelTests.swift */,
 			);
 			path = ViewModelsTests;
@@ -766,7 +732,6 @@
 				DEFF14E42A5DB31B008B62F7 /* ProductDetailsViewController+DataSource.swift in Sources */,
 				DE5144852A5CAE8500C124B9 /* NetworkServices+LoadImageDataRespositoryProtocol.swift in Sources */,
 				DE5144912A5CAEA800C124B9 /* LoadImageDataRespositoryProtocol.swift in Sources */,
-				DEDE5F732A5D31A600639F3D /* FetchCategorizedProductsUseCase.swift in Sources */,
 				DE5144592A5CAB5200C124B9 /* CloseButton.swift in Sources */,
 				DE5144142A5CA97000C124B9 /* AppDelegate.swift in Sources */,
 				DEFF14E92A5DB345008B62F7 /* ProductDetailsSections.swift in Sources */,
@@ -779,7 +744,6 @@
 				DEFF15002A5DE317008B62F7 /* ErrorHandlerViewModelProtocol.swift in Sources */,
 				DE51448A2A5CAE8500C124B9 /* API.swift in Sources */,
 				DEFF14E72A5DB33C008B62F7 /* ProductDetailsItems.swift in Sources */,
-				DEDE5F742A5D31A600639F3D /* LoadImageDataUseCase.swift in Sources */,
 				DE5144622A5CAB5200C124B9 /* Assets++Strings.swift in Sources */,
 				DEDE5FA82A5D87AD00639F3D /* PageLoadingProtocol.swift in Sources */,
 				DEFF14E02A5DAEEA008B62F7 /* StretchyTableHeaderView.swift in Sources */,
@@ -834,14 +798,10 @@
 				DEDE5F822A5D478500639F3D /* TimeMeasurer.swift in Sources */,
 				DEDE5F7A2A5D33C000639F3D /* JSONLoader.swift in Sources */,
 				DEDA364E2A5E9E5000BF2602 /* MockData.swift in Sources */,
-				DEDE5F6B2A5D30FA00639F3D /* LoadImageDataUseCaseMock.swift in Sources */,
-				DEDE5F842A5D4B7100639F3D /* LoadImageDataUseCaseTests.swift in Sources */,
-				DEDE5F692A5D30FA00639F3D /* FetchCategorizedProductsUseCaseMock.swift in Sources */,
 				DEFF15092A5DED7C008B62F7 /* ProductListViewModelTests.swift in Sources */,
 				DEDE5F682A5D30FA00639F3D /* CategorizedProductsRepositoryMock.swift in Sources */,
 				DEDE5F882A5D4C7100639F3D /* MockActions.swift in Sources */,
 				DEDE5F6E2A5D30FA00639F3D /* JSONLoader++JSONMocks.swift in Sources */,
-				DEDE5F772A5D332B00639F3D /* FetchCategorizedProductsUseCaseTests.swift in Sources */,
 				DEDE5F6C2A5D30FA00639F3D /* LoadImageDataRespositoryMock.swift in Sources */,
 				DEDE5F802A5D476600639F3D /* XCAsserts.swift in Sources */,
 				DEDE5F872A5D4C7100639F3D /* Mock.swift in Sources */,

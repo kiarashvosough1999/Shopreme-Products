@@ -32,7 +32,7 @@ final class ProductCollectionViewCellViewModel {
 
     // MARK: - Dependencies
 
-    @LazyInjected(\.loadImageDataUseCase) private var loadImageDataUseCase
+    @LazyInjected(\.loadImageDataRespository) private var loadImageDataRespository
 
     // MARK: - LifeCycle
 
@@ -41,7 +41,7 @@ final class ProductCollectionViewCellViewModel {
         self.imageLoadedSubject = CurrentValueSubject<Data?, Never>(nil)
         loadTask = Task {
             do {
-                let data = try await loadImageDataUseCase.loadimageData(model.imageURL)
+                let data = try await loadImageDataRespository.loadimageData(model.imageURL)
                 guard Task.isCancelled == false else { return }
                 imageLoadedSubject.send(data)
             } catch {}
