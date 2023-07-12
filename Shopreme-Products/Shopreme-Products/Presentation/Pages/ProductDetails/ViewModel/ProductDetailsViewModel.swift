@@ -44,15 +44,13 @@ final class ProductDetailsViewModel {
         self.product = product
         self.imageLoadedSubject = PassthroughSubject<Data?, Never>()
         self.closePageSubject = PassthroughSubject<Void, Never>()
+        
+        let context = ProductEntityToProductSnapShotMapper.Context(
+            concyrrencyCode: "EUR",
+            section: .main
+        )
         self.didReceivedSnapshotSubject = CurrentValueSubject<ProductSnapShot, Never>(
-            ProductSnapShot(
-                section: .main,
-                item: [
-                    .title(ProductDetailsItems.Title(title: product.title)),
-                    .price(ProductDetailsItems.Price(price: product.price.formatted(.currency(code: "EUR")))),
-                    .description(ProductDetailsItems.Description(description: product.description))
-                ]
-            )
+            ProductEntityToProductSnapShotMapper().map(product, context: context)
         )
     }
 

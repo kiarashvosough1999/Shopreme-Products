@@ -32,7 +32,7 @@ final class LoadImageDataRespositoryMock: Mock {
 extension LoadImageDataRespositoryMock: LoadImageDataRespositoryProtocol {
 
     func loadimageData(_ url: URL) async throws -> Data {
-        try await Task.sleep(nanoseconds: UInt64(delayInSecond * 1_000_000_000))
+        try await Task.sleep(nanoseconds: UInt64(delayInSecond * NSEC_PER_SEC))
         if let error { throw error }
         self.url = url
         actions.register(.loadimageData(url))

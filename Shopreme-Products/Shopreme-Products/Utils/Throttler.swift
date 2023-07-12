@@ -9,7 +9,6 @@ import Foundation
 
 final class Throttler {
     private let delay: TimeInterval
-    private var workItem: DispatchWorkItem?
     private var lastAttempt: Date?
 
     init(delay: TimeInterval) {
@@ -17,15 +16,14 @@ final class Throttler {
         self.lastAttempt = .init(timeIntervalSinceNow: delay + 1)
     }
 
-    func go(queue: DispatchQueue = .main, _ action: @escaping () -> Void) {
-        if let lastAttempt, lastAttempt.timeIntervalSinceNow >= delay {
-            workItem = DispatchWorkItem(block: action)
-            queue.asyncAfter(deadline: .now(), execute: workItem!)
-        } else {
-            workItem?.cancel()
-            workItem = DispatchWorkItem(block: action)
-            queue.asyncAfter(deadline: .now() + delay, execute: workItem!)
+    func canGo() -> Bool {
+        defer {
+            lastAttempt = .now
         }
-        lastAttempt = .now
+        if let lastAttempt, lastAttempt.timeIntervalSinceNow >= delay {
+            return true
+        } else {
+            return false
+        }
     }
 }

@@ -15,10 +15,10 @@ protocol ProductListViewModelProtocol: ErrorHandlerViewModelProtocol {
     
     var didReceivedSnapshot: AnyPublisher<[ProductCategorySnapShot], Never> { get }
     var shouldStartActivity: AnyPublisher<LabledActivityViewModel?, Never> { get }
-    var showProductDetailsPublisher: AnyPublisher<ProductEntity, Never> { get }
+    var showProductDetailsPublisher: AnyPublisher<ProductEntity?, Never> { get }
 
     func getHeaderViewModel(for indexPath: IndexPath) -> CollectionViewHeaderReusableViewModel?
-    func fetchProducts()
+    func fetchProducts() async
     func getProductCollectionViewCellViewModel(for item: ProductCollectionViewCellModel) -> ProductCollectionViewCellViewModelProtocol
     func didSelectedItem(at indexPath: IndexPath)
 }
@@ -30,10 +30,9 @@ final class ProductListViewModel {
     // MARK: - Properties
 
     private let categories: CurrentValueSubject<[ProductCategoryEntity], Never>
-    private let activitySubject: PassthroughSubject<LabledActivityViewModel?, Never>
-    private let showProductDetailsSubject: PassthroughSubject<ProductEntity, Never>
-    private let shouldStartRetrySubject: PassthroughSubject<RetryButtonModel?, Never>
-    private var fetchTask: Task<Void, Never>?
+    private let activitySubject: CurrentValueSubject<LabledActivityViewModel?, Never>
+    private let showProductDetailsSubject: CurrentValueSubject<ProductEntity?, Never>
+    private let shouldStartRetrySubject: CurrentValueSubject<RetryButtonModel?, Never>
     private let throttler: Throttler
     
     // MARK: - Dependencies
@@ -44,16 +43,16 @@ final class ProductListViewModel {
 
     init() {
         self.categories = CurrentValueSubject<[ProductCategoryEntity], Never>([])
-        self.activitySubject = PassthroughSubject<LabledActivityViewModel?, Never>()
-        self.showProductDetailsSubject = PassthroughSubject<ProductEntity, Never>()
-        self.shouldStartRetrySubject = PassthroughSubject<RetryButtonModel?, Never>()
+        self.activitySubject = CurrentValueSubject<LabledActivityViewModel?, Never>(nil)
+        self.showProductDetailsSubject = CurrentValueSubject<ProductEntity?, Never>(nil)
+        self.shouldStartRetrySubject = CurrentValueSubject<RetryButtonModel?, Never>(nil)
         self.throttler = Throttler(delay: 5)
     }
 }
 
 extension ProductListViewModel: ProductListViewModelProtocol {
     
-    var showProductDetailsPublisher: AnyPublisher<ProductEntity, Never> {
+    var showProductDetailsPublisher: AnyPublisher<ProductEntity?, Never> {
         showProductDetailsSubject.eraseToAnyPublisher()
     }
 
@@ -62,57 +61,36 @@ extension ProductListViewModel: ProductListViewModelProtocol {
     }
 
     var didReceivedSnapshot: AnyPublisher<[ProductCategorySnapShot], Never> {
-        categories
-            .map(map)
+        let mapper = ProductCategoryEntityToProductCategorySnapShotMapper()
+        let context = ProductCategoryEntityToProductCategorySnapShotMapper.Context(currencyCode: "EUR")
+        return categories
+            .map { mapper.map($0, context: context) }
             .eraseToAnyPublisher()
-    }
-
-    private func map(_ result:  [ProductCategoryEntity]) -> [ProductCategorySnapShot] {
-        result.map { category in
-            ProductCategorySnapShot(
-                section: ProductListSection(title: category.title),
-                items: category.products.map { product in
-                    ProductListItem.simpleProduct(
-                        item: ProductCollectionViewCellModel(
-                            imageURL: product.imageURL,
-                            title: product.title,
-                            price: product.price.formatted(.currency(code: "EUR")),
-                            strikePrefix: "",
-                            strikePrice: product.strikePrice?.formatted(.currency(code: "EUR")) ?? ""
-                        )
-                    )
-                }
-            )
-        }
     }
 
     var shouldStartActivity: AnyPublisher<LabledActivityViewModel?, Never> {
         activitySubject.eraseToAnyPublisher()
     }
 
-    func fetchProducts() {
-        self.throttler.go { [weak self] in
-            guard let self else { return }
-            let activityModel = LabledActivityViewModel(
-                loadingDescription: .localized(.produckte_werden_geladen).capitalized
+    func fetchProducts() async {
+        guard throttler.canGo() else { return }
+        let activityModel = LabledActivityViewModel(
+            loadingDescription: .localized(.produckte_werden_geladen).capitalized
+        )
+        self.shouldStartRetrySubject.send(nil)
+        self.activitySubject.send(activityModel)
+        do {
+            let result = try await self.categorizedProductsUseCase.fetch()
+            self.activitySubject.send(nil)
+            self.categories.send(result)
+        } catch let error as LocalizedError {
+            self.activitySubject.send(nil)
+            self.shouldStartRetrySubject.send(
+                RetryButtonModel(subtitle: error.errorDescription ?? "")
             )
-            self.activitySubject.send(activityModel)
-            self.fetchTask = Task {
-                do {
-                    let result = try await self.categorizedProductsUseCase.fetch()
-                    self.shouldStartRetrySubject.send(nil)
-                    self.activitySubject.send(nil)
-                    self.categories.send(result)
-                } catch let error as LocalizedError {
-                    self.activitySubject.send(nil)
-                    self.shouldStartRetrySubject.send(
-                        RetryButtonModel(subtitle: error.errorDescription ?? "")
-                    )
-                } catch {
-                    self.activitySubject.send(nil)
-                    self.shouldStartRetrySubject.send(RetryButtonModel())
-                }
-            }
+        } catch {
+            self.activitySubject.send(nil)
+            self.shouldStartRetrySubject.send(RetryButtonModel())
         }
     }
     

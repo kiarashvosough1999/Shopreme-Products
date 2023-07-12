@@ -12,8 +12,12 @@ import Factory
 final class LoadImageDataUseCaseTests: XCTestCase, JSONLoader, TimeMeasurer {
     
     private var sut: LoadImageDataUseCaseProtocol!
+    private var data: Data!
+    private var url: URL!
     
     override func setUpWithError() throws {
+        data = MockData.data
+        url = MockURL.urls.first!
         sut = LoadImageDataUseCase()
     }
 
@@ -23,13 +27,11 @@ final class LoadImageDataUseCaseTests: XCTestCase, JSONLoader, TimeMeasurer {
     }
 
     func testReceivingImageDataSuccessfully() async throws {
-        let data = Data(repeating: 12, count: 12)
-        let url = MockURL.urls.first!
         let delayInSecond: UInt64 = 2
         let loadImageDataRespositoryMockActions = MockActions<LoadImageDataRespositoryMock.Action>(expected: [.loadimageData(url)])
         
         Container.shared.loadImageDataRespository.register {
-            LoadImageDataRespositoryMock(actions: loadImageDataRespositoryMockActions, delayInSecond: delayInSecond, data: data)
+            LoadImageDataRespositoryMock(actions: loadImageDataRespositoryMockActions, delayInSecond: delayInSecond, data: self.data)
         }
 
         try await measureExecution(expectedTime: delayInSecond) {
@@ -41,15 +43,13 @@ final class LoadImageDataUseCaseTests: XCTestCase, JSONLoader, TimeMeasurer {
     }
 
     func testReceivingImageDataFailed() async throws {
-        let data = Data(repeating: 12, count: 12)
-        let url = MockURL.urls.first!
         let domain = "test"
         let code = -123
         let delayInSecond: UInt64 = 2
         let error = NSError(domain: domain, code: code)
         
         Container.shared.loadImageDataRespository.register {
-            LoadImageDataRespositoryMock(delayInSecond: delayInSecond, data: data, error: error)
+            LoadImageDataRespositoryMock(delayInSecond: delayInSecond, data: self.data, error: error)
         }
 
         try await measureExecution(expectedTime: delayInSecond) {

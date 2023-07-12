@@ -13,7 +13,7 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol, Re
     private var cancellables: Set<AnyCancellable>
 
     // MARK: - Views
-
+    
     private lazy var collectionView: UICollectionView = {
         let view = UICollectionView(
             frame: .zero,
@@ -50,7 +50,9 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol, Re
         super.viewDidLoad()
         bindToViewModel()
         prepare()
-        viewModel.fetchProducts()
+        Task {
+            await viewModel.fetchProducts()
+        }
     }
 
     // MARK: - Preparing Views
@@ -63,6 +65,7 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol, Re
     }
 
     private func prepareCollectionView() {
+        collectionView.accessibilityIdentifier = "product collection"
         collectionView.delegate = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView)
@@ -88,7 +91,9 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol, Re
 
         let action = UIAction { [weak self] _ in
             guard let self else { return }
-            self.viewModel.fetchProducts()
+            Task {
+                await self.viewModel.fetchProducts()
+            }
         }
         handleError(on: viewModel, action: action)
             .store(in: &cancellables)
@@ -98,13 +103,13 @@ final class ProductListViewController: UIViewController, PageLoadingProtocol, Re
             .receive(on: DispatchQueue.main)
             .sink { [weak self] model in
                 guard let self else { return }
-                self.removeRetryButton()
                 self.shouldShowActivityView(model: model)
             }
             .store(in: &cancellables)
         
         viewModel
             .showProductDetailsPublisher
+            .compactMap { $0 }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] product in
                 guard let self else { return }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductSnapShot {
+struct ProductSnapShot: Equatable {
     let section: ProductDetailsSections
     let item: [ProductDetailsItems]
 }

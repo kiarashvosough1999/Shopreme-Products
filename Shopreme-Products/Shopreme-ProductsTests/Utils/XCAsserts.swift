@@ -41,3 +41,68 @@ func XCTAssertNoThrowsError<T>(
         XCTAssert(true, file: file, line: line)
     }
 }
+
+func XCTAssertNotNilNil<T>(
+    _ expression: @autoclosure () throws -> T??,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #filePath,
+    line: UInt = #line
+) rethrows {
+    let res = try expression()
+    switch res {
+    case .none:
+        XCTAssert(false)
+    case .some(let wrapped):
+        switch wrapped {
+        case .none:
+            XCTAssert(false)
+        case .some:
+            XCTAssert(true)
+        }
+    }
+}
+
+func XCTAssertNilNil<T>(
+    _ expression: @autoclosure () throws -> T??,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #filePath,
+    line: UInt = #line
+) rethrows {
+    let res = try expression()
+    switch res {
+    case .none:
+        XCTAssert(true)
+    case .some(let wrapped):
+        switch wrapped {
+        case .none:
+            XCTAssert(true)
+        case .some:
+            XCTAssert(false)
+        }
+    }
+}
+
+func XCTAssertNilNilNil<T>(
+    _ expression: @autoclosure () throws -> T???,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #filePath,
+    line: UInt = #line
+) rethrows {
+    let res = try expression()
+    switch res {
+    case .none:
+        XCTAssert(true)
+    case .some(let wrapped):
+        switch wrapped {
+        case .none:
+            XCTAssert(true)
+        case .some(let wrapped):
+            switch wrapped {
+            case .none:
+                XCTAssert(true)
+            case .some:
+                XCTAssert(false)
+            }
+        }
+    }
+}

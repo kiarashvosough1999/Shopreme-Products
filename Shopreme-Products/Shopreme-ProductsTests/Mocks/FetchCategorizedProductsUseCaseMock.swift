@@ -12,11 +12,17 @@ final class FetchCategorizedProductsUseCaseMock {
     var delayInSecond: UInt64 = 0
     var productCategory: [ProductCategoryEntity] = []
     var error: Error?
+    
+    init(delayInSecond: UInt64 = 0, productCategory: [ProductCategoryEntity] = [], error: Error? = nil) {
+        self.delayInSecond = delayInSecond
+        self.productCategory = productCategory
+        self.error = error
+    }
 }
 
 extension FetchCategorizedProductsUseCaseMock: FetchCategorizedProductsUseCaseProtocol {
-    func fetch() async throws -> [Shopreme_Products.ProductCategoryEntity] {
-        try await Task.sleep(nanoseconds: UInt64(delayInSecond * 1_000_000_000))
+    func fetch() async throws -> [ProductCategoryEntity] {
+        try await Task.sleep(nanoseconds: UInt64(delayInSecond * NSEC_PER_SEC))
         if let error { throw error }
         return productCategory
     }

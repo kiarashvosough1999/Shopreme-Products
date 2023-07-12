@@ -13,4 +13,11 @@ extension JSONLoader {
     func loadCategorizedProducts() throws -> CategoriesEntity {
         try loadJSON(name: "categorizedProducts", as: CategoriesEntity.self)
     }
+    
+    func loadAllProducts() throws -> [ProductEntity] {
+        try loadJSON(name: "categorizedProducts", as: CategoriesEntity.self)
+            .categories
+            .map(\.products)
+            .flatMap { $0 }
+    }
 }

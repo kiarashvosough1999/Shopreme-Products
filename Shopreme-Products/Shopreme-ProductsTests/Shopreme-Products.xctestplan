@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "B0EE29AA-40BF-48CF-8836-527113166F43",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Shopreme-Products.xcodeproj",
+        "identifier" : "DE5144252A5CA97100C124B9",
+        "name" : "Shopreme-ProductsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
