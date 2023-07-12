@@ -18,6 +18,7 @@ I have created an iOS App "Shopreme-Products" and implemented the Design from ![
 - [x] MVVM
 - [x] Language: Swift 5.5
 - [x] UIKit
+- [x] Combine
 
 ## Features and Bonuses
 
@@ -33,7 +34,7 @@ I have created an iOS App "Shopreme-Products" and implemented the Design from ![
 - [x] Haptic Feedbacks
 - [x] Image Caching
 - [x] Avoided Complexity
-- [x] Layer Depend on Abstraction/Interfaces(Scalability)
+- [x] Layers Depend on Abstraction/Interfaces(Scalability)
 
 # Architecture Overview
 
