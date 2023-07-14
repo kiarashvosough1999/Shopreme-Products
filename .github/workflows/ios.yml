@@ -18,14 +18,14 @@ jobs:
     - name: Build On ${{ matrix.name }}
       continue-on-error: false
       run: |
-        cd ..
-        xcodebuild -scheme Shopreme-Products -destination '${{ matrix.destination }}' build
+        ls
+        xcodebuild -scheme "Shopreme-Products" -destination '${{ matrix.destination }}' build
         
     - name: Test On ${{ matrix.name }}
       continue-on-error: false
       run: |
-        cd ..
-        xcodebuild -scheme Shopreme-Products -destination '${{ matrix.destination }}' test
+        ls
+        xcodebuild -scheme "Shopreme-Products" -destination '${{ matrix.destination }}' test
     
     strategy:
       fail-fast: false
